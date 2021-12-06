@@ -7,8 +7,15 @@ import { Playlist } from "../Playlist/Playlist.js";
 export class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      searchResults: [
+        { songName: "song1", artist: "artist1", album: "album1", id: 1 },
+        { songName: "song2", artist: "artist2", album: "album2", id: 2 },
+        { songName: "song3", artist: "artist3", album: "album3", id: 3 },
+        { songName: "song4", artist: "artist4", album: "album4", id: 4 },
+      ],
+    };
   }
-
 
   render() {
     return (
