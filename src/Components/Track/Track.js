@@ -4,9 +4,9 @@ export class Track extends React.Component {
   renderAction() {
     let isRemoval;
     if (isRemoval) {
-      return <button>-</button>;
+      return <button className="Track-action">-</button>;
     } else {
-      return <button>+</button>;
+      return <button className="Track-action">+</button>;
     }
   }
 
