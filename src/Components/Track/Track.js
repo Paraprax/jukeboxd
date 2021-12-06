@@ -1,4 +1,5 @@
 import React from "react";
+import './Track.css';
 
 export class Track extends React.Component {
   renderAction() {
@@ -17,7 +18,7 @@ export class Track extends React.Component {
           {/* <h3><!-- track name here --></h3> */}
           {/* <p><!-- track artist here--> | <!-- track album here --></p> */}
         </div>
-        {/* <button className="Track-action"><!-- + or - here --></button> */}
+        {this.renderAction}
       </div>
     );
   }
