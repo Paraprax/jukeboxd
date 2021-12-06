@@ -10,7 +10,7 @@ export class App extends React.Component {
       <div>
         <h1>Jukeboxd</h1>
         <div className="App">
-          {/* <!-- SearchBar component here --> */}
+          <SearchBar />
           <div className="App-playlist">
             {/* <!-- SearchResults component here -->
               <!-- Playlist component here --> */}
