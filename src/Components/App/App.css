@@ -6,11 +6,12 @@ html,
 
 html {
   font-size: 18px;
+  background-color: #775e43;
 }
 
 h1 {
   padding: 0.77rem 0;
-  background-color: #010c3f;
+  background-color: #4b2a07;
   text-align: center;
   font-family: "Courier", sans-serif;
   font-size: 1.88rem;
