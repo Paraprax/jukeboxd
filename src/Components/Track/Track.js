@@ -1,6 +1,15 @@
 import React from "react";
 
 export class Track extends React.Component {
+  renderAction() {
+    let isRemoval;
+    if (isRemoval) {
+      return <button>-</button>;
+    } else {
+      return <button>+</button>;
+    }
+  }
+
   render() {
     return (
       <div className="Track">
