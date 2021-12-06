@@ -12,8 +12,8 @@ export class App extends React.Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-            {/* <!-- SearchResults component here -->
-              <!-- Playlist component here --> */}
+            <SearchResults />
+            <Playlist />
           </div>
         </div>
       </div>
