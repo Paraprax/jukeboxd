@@ -1,5 +1,5 @@
 import React from "react";
-import './Track.css';
+import "./Track.css";
 
 export class Track extends React.Component {
   renderAction() {
@@ -12,11 +12,17 @@ export class Track extends React.Component {
   }
 
   render() {
+    let trackName = this.props.track.songName;
+    let trackArtist = this.props.track.artist;
+    let trackAlbum = this.props.track.album;
+
     return (
       <div className="Track">
         <div className="Track-information">
-          {/* <h3><!-- track name here --></h3> */}
-          {/* <p><!-- track artist here--> | <!-- track album here --></p> */}
+          <h3>{trackName}</h3>
+          <p>
+            {trackArtist} | {trackAlbum}
+          </p>
         </div>
         {this.renderAction}
       </div>
