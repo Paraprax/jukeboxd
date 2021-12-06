@@ -9,9 +9,9 @@ export class App extends React.Component {
     return (
       <div>
         <h1>Jukeboxd</h1>
-        <div class="App">
+        <div className="App">
           {/* <!-- SearchBar component here --> */}
-          <div class="App-playlist">
+          <div className="App-playlist">
             {/* <!-- SearchResults component here -->
               <!-- Playlist component here --> */}
           </div>
