@@ -3,6 +3,10 @@ import { TrackList } from "../TrackList/TrackList.js";
 import "./Playlist.css";
 
 export class Playlist extends React.Component {
+  handleRename(event) {
+    this.props.onRename(event.target.value);
+  }
+
   render() {
     return (
       <div className="Playlist">
