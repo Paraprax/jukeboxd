@@ -24,6 +24,12 @@ export class App extends React.Component {
     };
   }
 
+  addTrack(track) {
+    if (this.state.playlistTracks.find((savedTrack) => savedTrack.id === track.id)) {
+      return; //ie. end this method if the id of the playlist track is already saved
+    }
+  }
+
   render() {
     return (
       <div>
