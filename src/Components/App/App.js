@@ -27,6 +27,7 @@ export class App extends React.Component {
     this.removeTrack = this.removeTrack.bind(this);
     this.renamePlaylist = this.renamePlaylist.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
+    this.search = this.search.bind(this);
   }
 
   addTrack(track) {
@@ -56,12 +57,16 @@ export class App extends React.Component {
     });
   }
 
+  search(input) {
+    console.log(input);
+  }
+
   render() {
     return (
       <div>
         <h1>Jukeboxd</h1>
         <div className="App">
-          <SearchBar />
+          <SearchBar onSearch={this.search} />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} />
             <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} onRemove={this.removeTrack} onRename={this.renamePlaylist} onSave={this.savePlaylist} />
