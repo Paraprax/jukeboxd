@@ -8,7 +8,11 @@ export class SearchBar extends React.Component {
   }
 
   search() {
-    this.props.onSearch(this.state.input);
+    this.props.onSearch(this.state.userInput);
+  }
+
+  handleSearchInput(event) {
+    this.setState({ userInput: event.target.value });
   }
 
   render() {

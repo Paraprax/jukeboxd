@@ -57,8 +57,8 @@ export class App extends React.Component {
     });
   }
 
-  search(input) {
-    console.log(input);
+  search(userInput) {
+    console.log(userInput);
   }
 
   render() {
