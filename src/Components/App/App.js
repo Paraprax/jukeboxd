@@ -16,10 +16,10 @@ export class App extends React.Component {
       ],
       playlistName: "playlist1",
       playlistTracks: [
-        { songName: "pSong1", artist: "pArtist1", album: "pAlbum1", id: 1 },
-        { songName: "pSong2", artist: "pArtist2", album: "pAlbum2", id: 2 },
-        { songName: "pSong3", artist: "pArtist3", album: "pAlbum3", id: 3 },
-        { songName: "pSong4", artist: "pArtist4", album: "pAlbum4", id: 4 },
+        { songName: "pSong5", artist: "pArtist5", album: "pAlbum5", id: 5 },
+        { songName: "pSong6", artist: "pArtist6", album: "pAlbum6", id: 6 },
+        { songName: "pSong7", artist: "pArtist7", album: "pAlbum7", id: 7 },
+        { songName: "pSong8", artist: "pArtist8", album: "pAlbum8", id: 8 },
       ],
     };
     this.addTrack = this.addTrack.bind(this);
