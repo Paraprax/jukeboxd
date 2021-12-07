@@ -38,7 +38,7 @@ export class App extends React.Component {
 
   removeTrack(track) {
     let currentTracks = this.state.playlistTracks;
-    currentTracks.filter((current) => current.id !== track.id);
+    currentTracks = currentTracks.filter((current) => current.id !== track.id);
     this.setState({ playlistTracks: currentTracks });
   }
 
