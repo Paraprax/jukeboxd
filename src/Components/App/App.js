@@ -42,6 +42,10 @@ export class App extends React.Component {
     this.setState({ playlistTracks: currentTracks });
   }
 
+  renamePlaylist(newName) {
+    this.setState({ playlistName: newName });
+  }
+
   render() {
     return (
       <div>
