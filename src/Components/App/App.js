@@ -22,9 +22,11 @@ export class App extends React.Component {
         { songName: "pSong8", artist: "pArtist8", album: "pAlbum8", id: 8 },
       ],
     };
+    //'this' bindings:
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
     this.renamePlaylist = this.renamePlaylist.bind(this);
+    this.savePlaylist = this.savePlaylist.bind(this);
   }
 
   addTrack(track) {
@@ -62,7 +64,7 @@ export class App extends React.Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} />
-            <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} onRemove={this.removeTrack} onRename={this.renamePlaylist} />
+            <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} onRemove={this.removeTrack} onRename={this.renamePlaylist} onSave={this.savePlaylist} />
           </div>
         </div>
       </div>
