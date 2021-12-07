@@ -25,9 +25,13 @@ export class App extends React.Component {
   }
 
   addTrack(track) {
-    if (this.state.playlistTracks.find((savedTrack) => savedTrack.id === track.id)) {
+    let currentTracks = this.state.playlistTracks;
+    if (currentTracks.find((savedTrack) => savedTrack.id === track.id)) {
       return; //ie. end this method if the id of the playlist track is already saved
     }
+    //otherwise
+    currentTracks.push(track);
+    this.setState({ playlistTracks: currentTracks });
   }
 
   render() {
