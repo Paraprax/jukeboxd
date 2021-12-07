@@ -22,6 +22,7 @@ export class App extends React.Component {
         { songName: "pSong4", artist: "pArtist4", album: "pAlbum4", id: 4 },
       ],
     };
+    this.addTrack = this.addTrack.bind(this);
   }
 
   addTrack(track) {
