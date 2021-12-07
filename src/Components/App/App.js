@@ -35,6 +35,12 @@ export class App extends React.Component {
     this.setState({ playlistTracks: currentTracks });
   }
 
+  removeTrack(track) {
+    let currentTracks = this.state.playlistTracks;
+    currentTracks.filter((current) => current.id !== track.id);
+    this.setState({ playlistTracks: currentTracks });
+  }
+
   render() {
     return (
       <div>
