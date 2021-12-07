@@ -10,6 +10,10 @@ export class Track extends React.Component {
     }
   }
 
+  addTrack() {
+    this.props.onAdd(this.props.track);
+  }
+
   render() {
     let trackName = this.props.track.songName;
     let trackArtist = this.props.track.artist;
