@@ -47,6 +47,13 @@ export class App extends React.Component {
     this.setState({ playlistName: newName });
   }
 
+  //spotify API interaction:
+  savePlaylist() {
+    let trackURIs = this.state.playlistTracks.map((track) => {
+      return track.uri;
+    });
+  }
+
   render() {
     return (
       <div>
