@@ -2,6 +2,11 @@ import React from "react";
 import "./Track.css";
 
 export class Track extends React.Component {
+  constructor(props) {
+    super(props);
+    this.addTrack = this.addTrack.bind(this);
+  }
+
   renderAction() {
     if (this.props.isRemoval) {
       return <button className="Track-action">-</button>;
