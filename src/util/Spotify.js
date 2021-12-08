@@ -1,4 +1,10 @@
 let userAccessToken;
-const Spotify = {};
+const Spotify = {
+  getAccessToken() {
+    if (userAccessToken) {
+      return userAccessToken;
+    }
+  },
+};
 
 export default Spotify;
