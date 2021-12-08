@@ -5,6 +5,7 @@ export class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.search = this.search.bind(this);
+    this.handleSearchInput = this.handleSearchInput.bind(this);
   }
 
   search() {
@@ -18,7 +19,7 @@ export class SearchBar extends React.Component {
   render() {
     return (
       <div className="SearchBar">
-        <input placeholder="Search by Song, Artist or Album" />
+        <input placeholder="Search by Song, Artist or Album" onChange={this.handleSearchInput} />
         <button className="SearchButton">Ayyyy</button>
       </div>
     );
