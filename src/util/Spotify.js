@@ -6,9 +6,14 @@ const Spotify = {
     }
 
     //else parse a token string out of the URL using .match and a regEx:
-    const userAccessToken = window.location.href.match(/access_token=([^&]*)/);
+    const tokenMatch = window.location.href.match(/access_token=([^&]*)/);
     //likewise grab expiry info from URL:
-    const expiresIn = window.location.href.match(/expires_in=([^&]*)/);
+    const expiryMatch = window.location.href.match(/expires_in=([^&]*)/);
+
+    if (tokenMatch && expiryMatch) {
+      userAccessToken = tokenMatch[1];
+      let expiresIn = Number(expiryMatch[1]);
+    }
   },
 };
 
