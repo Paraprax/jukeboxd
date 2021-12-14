@@ -3,6 +3,7 @@ import "./App.css";
 import { SearchBar } from "../SearchBar/SearchBar.js";
 import { SearchResults } from "../SearchResults/SearchResults.js";
 import { Playlist } from "../Playlist/Playlist.js";
+import { Spotify } from "../../util/Spotify.js";
 
 export class App extends React.Component {
   constructor(props) {
