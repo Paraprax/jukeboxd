@@ -59,7 +59,7 @@ export class App extends React.Component {
   }
 
   search(userInput) {
-    console.log(userInput);
+    Spotify.searchSpotify(userInput);
   }
 
   render() {
