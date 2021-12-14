@@ -56,6 +56,11 @@ export const Spotify = {
     if (!listName || !trackURIArray.length) {
       return;
     }
+    const token = this.getAccessToken();
+    const headers = {
+      Authorization: `Bearer:  ${token}`,
+    };
+    let userId;
   },
 };
 
