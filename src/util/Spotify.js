@@ -26,6 +26,11 @@ const Spotify = {
       window.location = accessURL;
     }
   },
+
+  searchSpotify(searchTerm) {
+    const token = this.getAccessToken();
+    return fetch(`https://api.spotify.com/v1/search?type=track&q=${searchTerm}`);
+  },
 };
 
 export default Spotify;
