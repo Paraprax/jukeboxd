@@ -33,6 +33,8 @@ const Spotify = {
       headers: {
         Authorization: `Bearer:  ${token}`,
       },
+    }).then(response => {
+        return response.json();
     });
   },
 };
