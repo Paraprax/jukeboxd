@@ -56,6 +56,7 @@ export const Spotify = {
   savePlaylist(listName, trackURIArray) {
     //breakout if args are empty:
     if (!listName || !trackURIArray.length) {
+      console.log("empty");
       return;
     }
 
