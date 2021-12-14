@@ -1,4 +1,4 @@
-import { spotifyClientID } from "../../keys";
+import { spotifyClientID } from "../keys";
 let userAccessToken;
 const clientID = spotifyClientID;
 const redirectURI = "http://localhost:3000/";
