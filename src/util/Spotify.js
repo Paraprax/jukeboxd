@@ -78,7 +78,11 @@ export const Spotify = {
           .then((response) => response.json())
           .then((jsonResponse) => {
             const newPlaylistId = jsonResponse.id;
-            return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${newPlaylistId}/tracks`);
+            return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${newPlaylistId}/tracks`, {
+              headers: headers,
+              method: "POST",
+              body: JSON.stringify({ uris: trackURIArray }),
+            });
           });
       });
   },
