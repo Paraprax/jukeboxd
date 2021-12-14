@@ -53,9 +53,11 @@ export const Spotify = {
       });
   },
   savePlaylist(listName, trackURIArray) {
+    //breakout if args are empty:
     if (!listName || !trackURIArray.length) {
       return;
     }
+    //otherwise get the user's username via authorized request:
     const token = this.getAccessToken();
     const headers = {
       Authorization: `Bearer:  ${token}`,
@@ -63,7 +65,7 @@ export const Spotify = {
     let userId;
     return fetch(`https://api.spotify.com/v1/me`, {
       headers: headers,
-    });
+    }).then((response) => response.json());
   },
 };
 
