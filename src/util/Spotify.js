@@ -33,9 +33,24 @@ const Spotify = {
       headers: {
         Authorization: `Bearer:  ${token}`,
       },
-    }).then(response => {
+    })
+      .then((response) => {
         return response.json();
-    });
+      })
+      .then((jsonResponse) => {
+        //return an empty array if no tracks in the json response:
+        if (!jsonResponse.tracks) {
+          return [];
+        }
+        //else concoct this object:
+        return jsonResponse.tracks.items.map((track) => ({
+          id: track.id,
+          name: track.name,
+          artist: track.artists[0].name,
+          album: track.album.name,
+          uri: track.uri,
+        }));
+      });
   },
 };
 
