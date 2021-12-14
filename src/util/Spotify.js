@@ -3,7 +3,7 @@ let userAccessToken;
 const clientID = spotifyClientID;
 const redirectURI = "http://localhost:3000/";
 
-const Spotify = {
+export const Spotify = {
   getAccessToken() {
     if (userAccessToken) {
       return userAccessToken;
