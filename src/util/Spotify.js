@@ -52,6 +52,11 @@ export const Spotify = {
         }));
       });
   },
+  savePlaylist(listName, trackURIArray) {
+    if (!listName || !trackURIArray.length) {
+      return;
+    }
+  },
 };
 
 export default Spotify;
