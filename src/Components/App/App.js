@@ -52,7 +52,9 @@ export class App extends React.Component {
   }
 
   search(userInput) {
-    Spotify.searchSpotify(userInput);
+    Spotify.searchSpotify(userInput).then((searchResults) => {
+      this.setState({ searchResults: searchResults });
+    });
   }
 
   render() {
