@@ -1,7 +1,7 @@
 import { spotifyClientID } from "../keys";
-let userAccessToken;
 const clientID = spotifyClientID;
 const redirectURI = "http://localhost:3000/";
+let userAccessToken;
 
 export const Spotify = {
   getAccessToken() {
@@ -16,7 +16,7 @@ export const Spotify = {
 
     if (tokenMatch && expiryMatch) {
       userAccessToken = tokenMatch[1];
-      let expiresIn = Number(expiryMatch[1]);
+      const expiresIn = Number(expiryMatch[1]);
       //clear vars && grab new token on expiry:
       window.setTimeout(() => (userAccessToken = ""), expiresIn * 1000);
       window.history.pushState("Access Token", null, "/");

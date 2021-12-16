@@ -6,14 +6,17 @@ export class SearchBar extends React.Component {
     super(props);
     this.search = this.search.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
-  }
-
-  search() {
-    this.props.onSearch(this.state.userInput);
+    this.state = {
+      userInput: "",
+    };
   }
 
   handleSearchInput(event) {
     this.setState({ userInput: event.target.value });
+  }
+
+  search() {
+    this.props.onSearch(this.state.userInput);
   }
 
   render() {
