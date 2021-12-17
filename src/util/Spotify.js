@@ -1,4 +1,4 @@
-import { spotifyClientID } from "../keys";
+import spotifyClientID from "../keys";
 const clientID = spotifyClientID;
 const redirectURI = "http://localhost:3000/";
 let userAccessToken;
@@ -32,7 +32,7 @@ const Spotify = {
     const token = Spotify.getAccessToken();
     return fetch(`https://api.spotify.com/v1/search?type=track&q=${searchTerm}`, {
       headers: {
-        Authorization: `Bearer:  ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     })
       .then((response) => {
