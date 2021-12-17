@@ -33,7 +33,7 @@ export class Track extends React.Component {
   }
 
   render() {
-    let trackName = this.props.track.songName;
+    let trackName = this.props.track.name;
     let trackArtist = this.props.track.artist;
     let trackAlbum = this.props.track.album;
 
