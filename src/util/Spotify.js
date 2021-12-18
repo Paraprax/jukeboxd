@@ -1,6 +1,6 @@
 import spotifyClientID from "../keys";
 const clientID = spotifyClientID;
-const redirectURI = "http://localhost:3000/";
+const redirectURI = "https://jukeboxd.surge.sh/";
 let userAccessToken;
 
 const Spotify = {
